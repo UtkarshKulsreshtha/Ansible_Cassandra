@@ -4,5 +4,5 @@
    apt:
     name: openjdk-8-jdk
    # update_cache: yes
-    state: latest
+    state: present
 
