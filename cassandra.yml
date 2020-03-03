@@ -6,7 +6,7 @@
    - name: install openjdk-8-jdk
      apt: 
       name: openjdk-8-jdk
-      update_cache: yes
+#      update_cache: yes
       state: latest
    
    - name: Install transport https
