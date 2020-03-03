@@ -3,6 +3,6 @@
  - name: Install the  package
    apt:
     name: openjdk-8-jdk
-    update_cache: yes
+   # update_cache: yes
     state: latest
 
