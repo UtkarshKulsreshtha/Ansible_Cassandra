@@ -1,0 +1,4 @@
+---
+# tasks file for cassandra1
+- include_tasks: install_jdk_deb.yml
+- include_tasks: install_cassandra_deb.yml
