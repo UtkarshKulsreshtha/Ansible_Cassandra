@@ -1,5 +1,5 @@
 ---
- - command: apt-get clean
+ #- command: apt-get clean
  - name: Install the  package
    apt:
     name: openjdk-8-jdk
