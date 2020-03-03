@@ -1,0 +1,26 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+- name: install openjdk-8-jdk
+  apt: 
+   name: "{{item}}"
+   update_cache: yes
+   state: latest
+  with_items:
+  - openjdk-8-jdk
+  - transport-https
+- name: Add the Apache Cassandra repository keys 
+  apt_repository:
+    repo: deb http://www.apache.org/dist/cassandra/debian 36x main
+    state: present
+- name: add repository key
+  apt_key:
+    url: https://www.apache.org/dist/cassandra/KEYS 
+    state: present
+- name: install cassandra
+  apt: 
+   name: cassandra
+   update_cache: yes
+   state: latest
